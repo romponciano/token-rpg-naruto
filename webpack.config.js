@@ -36,7 +36,14 @@ module.exports = {
                 options: {
                     outputPath: '../fonts',
                 }
-            }
+            },
+            {
+                test: /\.(jpg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]'
+                },
+              }
         ]
     },
     plugins: [
