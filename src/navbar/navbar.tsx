@@ -1,5 +1,4 @@
 import { UserAPI } from 'ponciano-login-hook'
-import ISession from 'ponciano-login-hook/lib/interfaces.d'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import ActionIcon from '../components/action-icon'
@@ -32,15 +31,12 @@ const Navbar: React.FC<{ USER_API: UserAPI }> = ({ USER_API }) => {
     }, [])
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{ backgroundColor: "#DD580F" }}>
             <div className="collapse navbar-collapse mx-4 w-100 d-inline">
-                <a className="navbar-brand" href="/">Token Generator</a>
+                <a className="navbar-brand" href="/">NARUTO Token RPG</a>
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
                         <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/tokens">Tokens</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link disabled" href="/team">Team</a>
