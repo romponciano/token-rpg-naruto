@@ -1,6 +1,7 @@
 import React from 'react'
 import Login from './login/login'
 import { UserAPI, useSession } from 'ponciano-login-hook'
+import Navbar from './navbar/navbar'
 
 const App = () => {
     const USER_API = new UserAPI("https://rpg-naruto-login-service.herokuapp.com/rpg-naruto", useSession())
@@ -11,7 +12,7 @@ const App = () => {
     }
 
     return (
-        <h1>logado</h1>
+        <Navbar USER_API={USER_API} />
     )
 }
 

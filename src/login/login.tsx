@@ -9,11 +9,9 @@ const Login: React.FC<{ userAPI: UserAPI }> = ({ userAPI }): JSX.Element => {
     const login = (): Promise<void> => {
         return userAPI.login(username, password)
         .then(status => {
-            console.log('############ ', status)
             if(status != 200) setErrorMessage("Invalid username/password")
         })
         .catch(er => {
-            console.log(er)
             setErrorMessage("Invalid username/password")
         })
     }
