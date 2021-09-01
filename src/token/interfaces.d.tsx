@@ -1,4 +1,4 @@
-export { IToken }
+export { IToken, IPlayer, IJutsu, ICharacteristic, IBasicInfo, ILevel, IAttributes, ISkills, IElements, IMissions }
 
 interface IToken {
     basic: IBasicInfo
